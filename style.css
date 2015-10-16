@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font: 200 14px/1 'Helvetica Neue', Helvetica, Arial, Geneva, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'HelveticaNeue-CondensedBold', 'HelveticaNeueBoldCondensed', 'HelveticaNeue-Bold-Condensed', 'Helvetica Neue Bold Condensed', 'HelveticaNeueBold', 'HelveticaNeue-Bold', 'Helvetica Neue Bold', 'HelveticaNeue', 'Helvetica Neue', 'TeXGyreHerosCnBold', 'Helvetica', 'Tahoma', 'Geneva', 'Arial Narrow', 'Arial', sans-serif;
+  font-weight:600;
+  font-stretch:condensed;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+img, img a {
+  border: 0 none;
+}
+
+a {
+  color: #77BB41;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+#sidebar {
+  padding-left: 15px;
+  padding-top: 15px;
+}
+
+#sidebar h1 {
+  text-transform: uppercase;
+  word-spacing: 9999px;
+}
+
+#sidebar h6 {
+  font-size: 18px;
+  margin: 20px 0;
+  color: #77BB41;
+}
+
+#contact {
+  list-style: none;
+  font-size: 0;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 100px;
+  text-align: right;
+}
+#contact li {
+  display: inline;
+}
+#contact li a {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+  background: no-repeat center center;
+  text-indent: -9999px;
+  margin-left: 15px;
+  margin-bottom: 10px;
+}
+#contact .linkedin {
+  background-image: url(images/linkedin.png);
+}
+#contact .email {
+  background-image: url(images/email.png);
+}
+
+#content {
+  margin: 15px;
+  max-width: 600px;
+}
+
+#content p {
+  line-height: 1.5;
+  margin-bottom: 2em;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  #contact .linkedin {
+    background-image: url(images/linkedin_2x.png);
+    
+    -webkit-background-size: 32px 32px;
+    -moz-background-size: 32px 32px;
+    -o-background-size: 32px 32px;
+    background-size: 32px 32px;
+  }
+  #contact .email {
+    background-image: url(images/email_2x.png);
+    
+    -webkit-background-size: 32px 32px;
+    -moz-background-size: 32px 32px;
+    -o-background-size: 32px 32px;
+    background-size: 32px 32px;
+  }
+}
