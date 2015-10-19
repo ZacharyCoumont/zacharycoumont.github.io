@@ -1,0 +1,116 @@
+---
+---
+
+@mixin prefixify($attr, $val) {
+  -webkit-#{ $attr }: $val;
+  -moz-#{ $attr }: $val;
+  -ms-#{ $attr }: $val;
+  -o-#{ $attr }: $val;
+  #{ $attr }: $val;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font: normal 300 14px/1 Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  font-family: 'Roboto Condensed', 'Arial Narrow', Helvetica, Arial, sans-serif;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+img, img a {
+  border: 0 none;
+}
+
+a {
+  color: #77bb41;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+#sidebar {
+  padding-left: 15px;
+  padding-top: 15px;
+
+  h1 {
+    text-transform: uppercase;
+    word-spacing: 9999px;
+  }
+
+  h6 {
+    font-size: 18px;
+    margin: 20px 0;
+    color: #77BB41;
+  }
+}
+
+#contact {
+  list-style: none;
+  font-size: 0;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 100px;
+  text-align: right;
+
+  li {
+    display: inline;
+
+    a {
+      display: inline-block;
+      width: 32px;
+      height: 32px;
+      overflow: hidden;
+      background: no-repeat center center;
+      text-indent: -9999px;
+      margin-left: 15px;
+      margin-bottom: 10px;
+    }
+  }
+
+  .linkedin {
+    background-image: url('images/linkedin.png');
+  }
+
+  .email {
+    background-image: url('images/email.png');
+  }
+}
+
+#content {
+  margin: 15px;
+  max-width: 600px;
+
+  p {
+    line-height: 1.5;
+    margin-bottom: 2em;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  #contact {
+    .linkedin {
+      background-image: url('images/linkedin_2x.png');
+
+      @include prefixify(background-size, 32px 32px);
+    }
+
+    .email {
+      background-image: url('images/email_2x.png');
+
+      @include prefixify(background-size, 32px 32px);
+    }
+  }
+}
